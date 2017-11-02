@@ -1,5 +1,7 @@
 #pragma once
 #include "FSM.h"
+#include "State.h"
+#include "Idle.h"
 
 class Jumping : public State
 {

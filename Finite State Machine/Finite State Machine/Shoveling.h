@@ -1,5 +1,8 @@
 #pragma once
 #include "FSM.h"
+#include "State.h"
+#include "Idle.h"
+
 class Shoveling : public State
 {
 public:

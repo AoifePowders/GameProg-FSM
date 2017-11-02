@@ -113,17 +113,21 @@
   <ItemGroup>
     <ClInclude Include="FSM.h" />
     <ClInclude Include="Hammering.h" />
+    <ClInclude Include="Idle.h" />
     <ClInclude Include="Jumping.h" />
     <ClInclude Include="Shoveling.h" />
+    <ClInclude Include="State.h" />
     <ClInclude Include="SwordsManship.h" />
     <ClInclude Include="Walking.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FSM.cpp" />
     <ClCompile Include="Hammering.cpp" />
+    <ClCompile Include="Idle.cpp" />
     <ClCompile Include="Jumping.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Shoveling.cpp" />
+    <ClCompile Include="State.cpp" />
     <ClCompile Include="SwordsManship.cpp" />
     <ClCompile Include="Walking.cpp" />
   </ItemGroup>
