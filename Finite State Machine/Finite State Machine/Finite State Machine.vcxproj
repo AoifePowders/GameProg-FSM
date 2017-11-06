@@ -137,7 +137,6 @@
     <ClCompile Include="Jumping.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Shoveling.cpp" />
-    <ClCompile Include="State.cpp" />
     <ClCompile Include="SwordsManship.cpp" />
     <ClCompile Include="Walking.cpp" />
   </ItemGroup>

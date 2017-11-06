@@ -2,6 +2,7 @@
 #include "FSM.h"
 #include <iostream>
 
+class FSM;
 class State
 {
 public:
