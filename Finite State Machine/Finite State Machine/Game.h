@@ -11,7 +11,6 @@ public:
 	Game();
 	~Game();
 	void run();
-	int i = 5;
 	FSM fsm;
 
 private:
@@ -23,6 +22,10 @@ private:
 	void setupSprite();
 
 	int timerJump;
+	int timerHammer;
+	int timerSword;
+	int timerShovel;
+	int timerWalking;
 	
 	sf::RenderWindow m_window; // main SFML window
 	sf::Texture m_texture; // texture

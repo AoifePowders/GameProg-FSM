@@ -5,7 +5,7 @@
 #include "FSM.h"
 
 Game::Game() :
-	m_window{ sf::VideoMode{ 800, 600, 32 }, "SFML Game" },
+	m_window{ sf::VideoMode{ 500, 500 }, "SFML Game" },
 	m_exitGame{ false } //when true game will exit
 {
 	setupSprite(); // load texture
@@ -57,57 +57,59 @@ void Game::processEvents()
 		}
 
 		//if key is pressed set the sprite and the timer and call the function
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num1))
 		{
 			timerJump = 0;
 			fsm.jumping();
-			if (!m_texture.loadFromFile("ASSETS\\IMAGES\\jump.png"))
+			if (!m_texture.loadFromFile("ASSETS\\IMAGES\\jump.jpg"))
 			{
 				std::cout << "problem loading logo" << std::endl;
 			}
-			m_sprite.setPosition(200.0f, 80.0f);
+			m_sprite.setPosition(0.0f, 0.0f);
 			m_sprite.setTexture(m_texture);
 		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::W))
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num2))
 		{
+			timerWalking = 0;
 			fsm.walking();
-			if (!m_texture.loadFromFile("ASSETS\\IMAGES\\walking.png"))
+			if (!m_texture.loadFromFile("ASSETS\\IMAGES\\walking.jpg"))
 			{
 				std::cout << "problem loading logo" << std::endl;
 			}
-			m_sprite.setPosition(350.0f, 180.0f);
+			m_sprite.setPosition(0.0f, 0.0f);
 			m_sprite.setTexture(m_texture);
 		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::H))
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num3))
 		{
+			timerHammer = 0;
 			fsm.hammering();
 			if (!m_texture.loadFromFile("ASSETS\\IMAGES\\Hammering.jpg"))
 			{
 				std::cout << "problem loading logo" << std::endl;
 			}
-			m_sprite.setPosition(200.0f, 80.0f);
-			m_sprite.setScale(0.5, 0.5);
+			m_sprite.setPosition(0.0f, 0.0f);
 			m_sprite.setTexture(m_texture);
 		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::S))
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num4))
 		{
+			timerSword = 0;
 			fsm.swordManship();
 			if (!m_texture.loadFromFile("ASSETS\\IMAGES\\Sword.jpg"))
 			{
 				std::cout << "problem loading logo" << std::endl;
 			}
-			m_sprite.setPosition(300.0f, 180.0f);
-			m_sprite.setScale(0.3, 0.3);
+			m_sprite.setPosition(0.0f, 0.0f);
 			m_sprite.setTexture(m_texture);
 		}
-		if (sf::Keyboard::isKeyPressed(sf::Keyboard::C))
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Num5))
 		{
+			timerShovel = 0;
 			fsm.shoveling();
-			if (!m_texture.loadFromFile("ASSETS\\IMAGES\\Shovel.png"))
+			if (!m_texture.loadFromFile("ASSETS\\IMAGES\\Shovel.jpg"))
 			{
 				std::cout << "problem loading logo" << std::endl;
 			}
-			m_sprite.setPosition(300.0f, 180.0f);
+			m_sprite.setPosition(0.0f, 0.0f);
 			m_sprite.setTexture(m_texture);
 		}
 	}
@@ -126,6 +128,31 @@ void Game::update(sf::Time t_deltaTime)
 		fsm.idle();
 		setupSprite();
 	}
+	timerHammer++;
+	if (timerHammer == 120)
+	{
+		fsm.idle();
+		setupSprite();
+	}
+	timerShovel++;
+	if (timerShovel == 120)
+	{
+		fsm.idle();
+		setupSprite();
+	}
+	timerSword++;
+	if (timerSword == 120)
+	{
+		fsm.idle();
+		setupSprite();
+	}
+	timerWalking++;
+	if (timerWalking == 120)
+	{
+		fsm.idle();
+		setupSprite();
+	}
+
 }
 
 /// draw the frame and then switch bufers
@@ -141,10 +168,10 @@ void Game::render()
 /// load the texture and setup the sprite for the logo
 void Game::setupSprite()
 {
-	if (!m_texture.loadFromFile("ASSETS\\IMAGES\\Standing.jpg"))
+	if (!m_texture.loadFromFile("ASSETS\\IMAGES\\standing.jpg"))
 	{
 		std::cout << "problem loading logo" << std::endl;
 	}
-	m_sprite.setPosition(100.0f, 80.0f);
+	m_sprite.setPosition(0.0f, 0.0f);
 	m_sprite.setTexture(m_texture);
 }
