@@ -1,5 +1,5 @@
 #include "Idle.h"
-
+/// @author Aoife Powders
 
 
 Idle::Idle()
@@ -14,7 +14,9 @@ Idle::~Idle()
 void Idle::hammering(FSM * a)
 {
 	std::cout << "Hammering" << std::endl;
+	//sets the current state 
 	a->setCurrent(new Idle());
+	//when finished being used it is deleted
 	delete this;
 }
 

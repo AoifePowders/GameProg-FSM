@@ -1,4 +1,4 @@
-// author Peter Lowe
+/// @author Aoife Powders
 
 #include "Game.h"
 #include <iostream>
@@ -9,8 +9,6 @@ Game::Game() :
 	m_exitGame{ false } //when true game will exit
 {
 	setupSprite(); // load texture
-
-
 }
 
 
@@ -61,6 +59,7 @@ void Game::processEvents()
 		{
 			timerJump = 0;
 			fsm.jumping();
+			//loads the texture from assets file
 			if (!m_texture.loadFromFile("ASSETS\\IMAGES\\jump.jpg"))
 			{
 				std::cout << "problem loading logo" << std::endl;
@@ -122,7 +121,9 @@ void Game::update(sf::Time t_deltaTime)
 	{
 		m_window.close();
 	}
+	//adds to the timer every update
 	timerJump++;
+	//if the timer hits 120 the state changes and the sprite changes
 	if (timerJump == 120)
 	{
 		fsm.idle();

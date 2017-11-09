@@ -1,5 +1,5 @@
 #include "Walking.h"
-
+/// @author Aoife Powders
 
 Walking::Walking()
 {

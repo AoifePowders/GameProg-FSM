@@ -19,8 +19,10 @@ private:
 	void update(sf::Time t_deltaTime);
 	void render();
 	
+	//sets up sprite
 	void setupSprite();
 
+	//timers for all the states
 	int timerJump;
 	int timerHammer;
 	int timerSword;

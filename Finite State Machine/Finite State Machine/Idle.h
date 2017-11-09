@@ -1,7 +1,9 @@
 #pragma once
+/// @author Aoife Powders
 #include "FSM.h"
 #include "State.h"
 
+//creates a class of public state
 class Idle : public State
 {
 public:

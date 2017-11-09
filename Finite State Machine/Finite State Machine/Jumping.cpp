@@ -1,5 +1,5 @@
 #include "Jumping.h"
-
+/// @author Aoife Powders
 
 
 Jumping::Jumping()

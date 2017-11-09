@@ -1,11 +1,15 @@
 #pragma once
+/// @author Aoife Powders
 #include "FSM.h"
 #include <iostream>
 
+//calls the fsm class
 class FSM;
+//creates a class state
 class State
 {
 public:
+	//creates a virtual function
 	virtual void idle(FSM* a)
 	{
 		std::cout << "State Ideling" << std::endl;

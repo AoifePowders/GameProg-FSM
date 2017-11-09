@@ -1,4 +1,5 @@
 #pragma once
+/// @author Aoife Powders
 #include <iostream>
 #include <chrono>
 #include <thread>
@@ -17,6 +18,7 @@ public:
 	void setCurrent(State* s)
 	{current = s;}
 
+	//makes functions
 	void idle();
 	void shoveling();
 	void hammering();

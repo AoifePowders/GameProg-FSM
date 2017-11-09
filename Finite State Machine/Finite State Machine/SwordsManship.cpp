@@ -1,6 +1,6 @@
 #include "SwordsManship.h"
 
-
+/// @author Aoife Powders
 
 SwordsManship::SwordsManship()
 {
