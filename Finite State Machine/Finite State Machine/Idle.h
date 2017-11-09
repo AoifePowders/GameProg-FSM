@@ -2,6 +2,11 @@
 /// @author Aoife Powders
 #include "FSM.h"
 #include "State.h"
+#include "Hammering.h"
+#include "Shoveling.h"
+#include "SwordsManship.h"
+#include "Jumping.h"
+#include "Walking.h"
 
 //creates a class of public state
 class Idle : public State

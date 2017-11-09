@@ -6,10 +6,11 @@
 
 #include "Idle.h"
 
+//calls class state
 class State;
 class FSM
 {
-	//calls class state
+	
 	class State* current;
 
 public:

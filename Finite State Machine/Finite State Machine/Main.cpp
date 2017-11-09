@@ -27,7 +27,5 @@ int main()
 {
 	Game game;
 	game.run();
-	FSM fsm;
-	
 	system("Pause");
 }

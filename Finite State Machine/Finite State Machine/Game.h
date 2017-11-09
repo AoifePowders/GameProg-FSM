@@ -12,7 +12,7 @@ public:
 	~Game();
 	void run();
 	FSM fsm;
-
+	State state;
 private:
 
 	void processEvents();
